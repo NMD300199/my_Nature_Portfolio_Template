@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+.grid {
+    width: 100%;
+    display: block;
+}
+
+.grid.wide {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.hr1 {
+    margin: 0 16px;
+    border: 5px solid #ccc;
+    border-radius: 3px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row2 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 0;
+}
+
+.col {
+   padding-left: 8px;
+   padding-right: 8px;
+}
+
+.l-4 {
+    max-width: 33.33333%;
+    flex: 0 0 33.33333%;
+}
+
+.l-6 {
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+
+@media only screen and (min-width: 991px) {
+    .container {
+        margin-left: 300px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .exit {
+        display: none!important;
+    }
+}
+
+
+@media only screen and (max-width: 990px) {
+    .navbar {
+        z-index: 3;
+    }
+    
+    .hidden {
+        display: none;
+    }
+
+    .exit {
+        display: block;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .container {
+        animation: ani ease 0.5s;
+    }
+
+    @keyframes ani {
+        from {
+            margin-left: 300px;
+        }
+        to {
+            margin-left: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .close {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sm-12 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .close {
+        display: none;
+    }
+}
